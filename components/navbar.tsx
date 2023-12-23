@@ -3,62 +3,59 @@ import { useEffect, useRef, useState } from 'react';
 import { HiMenu,HiArrowLeft } from 'react-icons/hi';
 
 
-const navbar = ({ children }:any) => {
+const navbar = ({ children }: any) => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
- const toggleMenu = () => {
+  const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
 
   const [showDropdown, setShowDropdown] = useState(false);
   useEffect(() => {
+    // Function to close the dropdown if the click is outside
+    const handleClickOutside = (event: { target: any; }) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setShowDropdown(false);
+      }
+    }
+
+    // Attach the listener to the window object to capture all clicks.
     if (showDropdown) {
       document.body.classList.add('overflow-y-hidden');
-      window.addEventListener('mousedown', handleMouseClickOutside);
-      window.addEventListener('scroll', handleScroll, { passive: false });
+      
+      document.addEventListener('mousedown', handleClickOutside);
     } else {
       document.body.classList.remove('overflow-y-hidden');
-      window.addEventListener('mousedown', handleMouseClickOutside);
-      window.removeEventListener('scroll', handleScroll);
     }
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.addEventListener('mousedown', handleMouseClickOutside);
 
+    // Return a cleanup function to remove the event listener
+    return () => {
+
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [showDropdown]);
-  
+
   function handleScroll(event: Event) {
     event.preventDefault();
   }
-  
-  let timeoutId = useRef<NodeJS.Timeout | undefined>(undefined);
 
- 
+  let timeoutId = useRef<NodeJS.Timeout | undefined>(undefined);
 
   function handleMouseEnter() {
     clearTimeout(timeoutId.current);
     setShowDropdown(!showDropdown);
-   
   }
-
-  const handleMouseClickOutside = (event: any) => {
-    if (dropdownRef.current && (dropdownRef.current as HTMLElement).contains(event.target as Node)) {
-      clearTimeout(timeoutId.current);
-      timeoutId.current = setTimeout(() => {
-        setShowDropdown(false);
-      }, 500);
-    }
-  }
+  
   return (
     <>
-      <nav className=" mt-[1%] top-[0] z-1000 font-sans font-bold  absolute flex w-screen  justify-around bg-gradient-to-r from-primarylight to-primary">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className=" mt-[1%] top-[0] z-1000 font-sans font-bold  absolute flex w-screen  justify-around bg-gradient-to-r from-primarylight to-primary "  >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" >
           <div className="flex items-center justify-between ">
             <div className="flex items-center text-4xl">
             
@@ -86,7 +83,7 @@ const navbar = ({ children }:any) => {
                      onClick={handleMouseEnter}
                      
                     
-                     onMouseDown={handleMouseClickOutside}
+                     
                      
                       
                       className="text-white z-[100] hover:bg-primarylight hover:text-white px-3 py-2 rounded-md text-3xl font-medium cursor-pointer"
@@ -102,7 +99,7 @@ const navbar = ({ children }:any) => {
                     >
                       <Link href="/Services/bigdata">
                         <div 
-                             onClick={handleMouseEnter}
+                             
                         className="block px-4 py-2 text-xl text-primary hover:bg-primarylight hover:text-white hover:underline cursor-pointer">
                           Bigdata
                         </div>
@@ -199,3 +196,4 @@ const navbar = ({ children }:any) => {
                     }
 export default navbar
   
+//shamdan9842@gmail.com
