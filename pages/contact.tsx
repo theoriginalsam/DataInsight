@@ -1,5 +1,6 @@
 
 import Head from 'next/head';
+import Router from 'next/router';
 import React, { useState } from 'react';
 
 const Contact = () => {
@@ -125,8 +126,9 @@ const Contact = () => {
             type="submit"
             className="bg-primarylight hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             style={{ backgroundColor: '#0a315e', color: '#FFFFFF' }}
+            onClick={() => Router.push('/thankyou')}
           >
-            OK
+            Submit
           </button>
         </form>
       </main>

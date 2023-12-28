@@ -1,12 +1,58 @@
+import { on } from 'events';
 import Head from 'next/head';
+import  Router  from 'next/router';
+import { useState } from 'react';
 import { workerData } from 'worker_threads';
 
 
 function WorkWithUs() {
-  const handleSubmit = (event: { preventDefault: () => void; }) => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+  });
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // Handle form submission logic here
+
+    try {
+      const response = await fetch('/api/serverRequest', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        console.log('Form submitted successfully');
+        // Reset form data after successful submission
+        setFormData({
+          name: 'LAD',
+          email: 'll',
+          phone: '',
+          message: '',
+        });
+        
+      } else {
+        console.error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Error submitting the form:', error);
+    }
   };
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = event.target;
+
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+
 
   return (
     <div className="">
@@ -29,13 +75,13 @@ function WorkWithUs() {
         <p className="text-gray-700 mb-5">We're always looking for talented individuals to help us build the future of AI and Big Data. Please fill out the form below and we'll get back to you as soon as possible:</p>
 
         <form onSubmit={handleSubmit} className="mb-5 ">
-          <label htmlFor="name" className="block text-gray-700 font-bold mb-2">Name</label>
-          <input type="text" id="name" name="name" required className="border border-gray-400 p-2 rounded-lg w-full mb-3" />
+          <label htmlFor="name" className="block text-gray-700 font-bold mb-2" >Name</label>
+          <input type="text" id="name" name="name" required className="border border-gray-400 p-2 rounded-lg w-full mb-3" onChange={handleChange} />
 
           <label htmlFor="email" className="block text-gray-700 font-bold mb-2">Email</label>
-          <input type="email" id="email" name="email" required className="border border-gray-400 p-2 rounded-lg w-full mb-3" />
+          <input type="email" id="email" name="email" required className="border border-gray-400 p-2 rounded-lg w-full mb-3" onChange={handleChange} />
           <label htmlFor="phone" className="block text-gray-700 font-bold mb-2">Phone</label>
-          <input type="phone" id="phone" name="phone" required className="border border-gray-400 p-2 rounded-lg w-full mb-3" />
+          <input type="phone" id="phone" name="phone" required className="border border-gray-400 p-2 rounded-lg w-full mb-3" onChange={handleChange} />
 
           <label htmlFor="help" className="block text-gray-700 font-bold mb-2">How can we help you?</label>
           <select id="help" name="help" required className="border border-gray-400 p-2 rounded-lg w-full mb-3">
@@ -46,7 +92,7 @@ function WorkWithUs() {
           </select>
 
           <label htmlFor="message" className="block text-gray-700 font-bold mb-2">Message</label>
-          <textarea id="message" name="message" className="border border-gray-400 p-2 rounded-lg w-full mb-3"></textarea>
+          <textarea id="message" name="message" className="border border-gray-400 p-2 rounded-lg w-full mb-3" onChange={handleChange}></textarea>
           <label htmlFor="terms" className="block text-gray-700 font-bold mb-2">
   <input type="checkbox" id="terms" name="terms" required className="mr-2 leading-tight" />
   <span className="text-sm">
@@ -57,7 +103,11 @@ function WorkWithUs() {
     </a>
   </span>
 </label>
-          <button type="submit" className="bg-primarylight hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" style={{ backgroundColor: '#0a315e', color: '#FFFFFF' }}>
+          <button type="submit" 
+          className="bg-primarylight hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" 
+          style={{ backgroundColor: '#0a315e', color: '#FFFFFF'  }}
+          onClick={() => Router.push('/thankyou')}
+          >
   Submit
 </button>
 
