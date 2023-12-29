@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { HiMenu,HiArrowLeft } from 'react-icons/hi';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
 const navbar = ({ children }: any) => {
@@ -137,6 +138,13 @@ const navbar = ({ children }: any) => {
                       Request Demo
                     </div>
                   </Link>
+                  <a href="https://courses.datainsight.cloud">
+  <div className="text-primarylight bg-white hover:bg-primarylight hover:text-white px-3 py-2 rounded-md flex items-center cursor-pointer">
+    Courses
+    <i className="fas fa-book ml-2"></i>
+  </div>
+</a>
+
                 </div>
               </div>
               
@@ -173,6 +181,38 @@ const navbar = ({ children }: any) => {
                 About
               </div>
             </Link>
+            <Link href="/contact">
+              <div
+                className="text-primarylight hover:bg-white hover:text-primarylight px-3 py-2 rounded-md text-xl font-medium cursor-pointer"
+                onClick={closeMenu}
+              >
+                Services
+              </div>
+            </Link>
+            <Link href="/contact">
+              <div
+                className="text-primarylight hover:bg-white hover:text-primarylight px-3 py-2 rounded-md text-xl font-medium cursor-pointer"
+                onClick={closeMenu}
+              >
+                Contact
+              </div>
+            </Link>
+            <Link href="/work">
+              <div
+                className="text-primarylight hover:bg-white hover:text-primarylight px-3 py-2 rounded-md text-xl font-medium cursor-pointer"
+                onClick={closeMenu}
+              >
+                Request a Demo
+              </div>
+            </Link>
+            <a
+  href="https://courses.datainsight.cloud"
+  className="text-primarylight hover:bg-white hover:text-primarylight px-3 py-2 rounded-md text-xl font-medium cursor-pointer"
+  onClick={closeMenu}
+  target="_blank" rel="noopener noreferrer"
+>
+  Courses
+</a>
           </div>
         </div>
       )}
