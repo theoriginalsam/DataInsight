@@ -19,7 +19,7 @@ export default function Home() {
 >
   <div className="text-center">
     <h1 className="font-sans font-bold text-4xl md:text-7xl">
-      AI Big Data Inside
+      DataInsight
     </h1>
     <h4 className="font-sans font-bold text-lg md:text-xl pt-3 md:pt-5">
       We're here for your A.I. and Big Data needs.

@@ -1,7 +1,19 @@
 const Footer = () => {
     return (
         <footer className="bg-s dark:bg-gray-900 mt-[10%] bg-gradient-to-r from-primarylight to-primary">
-            <div className="grid grid-cols-2 gap-8 px-6 py-6 md:grid-cols-3 item-center">
+
+            <div className="grid grid-cols-2 gap-8 px-6 py-6 md:grid-cols-4 item-center">
+            <div className="  space-y-2 sm:flex-row sm:justify-center sm:space-x-6 sm:space-y-0">
+            <div className=" md:mx-10 text-white dark:text-gray-300">
+                <span className="text-4xl">DataInsight</span>
+                <br />
+                <span>+1-615-807-0286</span>
+                <br />
+                <span>support@datainsight.cloud</span>
+                <br />
+                <span>Franklin, TN</span>
+            </div>
+            </div>
                 <div>
                     <h2 className="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Company</h2>
                     <ul className="text-white dark:text-white">
@@ -23,7 +35,7 @@ const Footer = () => {
                     <h2 className="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Help center</h2>
                     <ul className="text-white dark:text-white">
                         <li className="mb-4">
-                            <a href="#" className="hover:underline">Discord Server</a>
+                            <a href="#" className="hover:underline">LinkedIn</a>
                         </li>
                         <li className="mb-4">
                             <a href="#" className="hover:underline">Twitter</a>
@@ -52,7 +64,9 @@ const Footer = () => {
                 </div>
             </div>
             <div className="px-4 py-6 bg-gradient-to-r from-primarylight to-primary dark:bg-gray-700 md:flex md:items-center md:justify-between">
+      
                 <span className="text-sm text-white dark:text-gray-300 sm:text-center">© 2023 <a href="#" className="text-white">AI BigData</a>. All Rights Reserved.</span>
+                
                 <div className="flex mt-4 space-x-6 sm:justify-center md:mt-0">
                     <a href="#" className="text-white hover:text-gray-900 dark:hover:text-white">
                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -78,8 +92,10 @@ const Footer = () => {
                         </svg>
                         <span className="sr-only">GitHub account</span>
                     </a>
-                </div>
+                </div>    
+
             </div>
+            
         </footer>
     );
 }

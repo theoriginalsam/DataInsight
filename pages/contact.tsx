@@ -1,139 +1,66 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
+import mongoose from 'mongoose';
 
-import Head from 'next/head';
-import Router from 'next/router';
-import React, { useState } from 'react';
+// Define your Mongoose schema for the form data
+const formDataSchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  phone: String,
+  message: String,
+});
 
-const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
+// Create a Mongoose model based on the schema
+const FormDataModel = mongoose.models.Contact || mongoose.model('Contact', formDataSchema);
+
+const mongoURI = 'mongodb+srv://datainsight:12345@cluster0.lf0iiaq.mongodb.net/AIConsultingDB';
+
+mongoose.connect(mongoURI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+} as mongoose.ConnectOptions) // Type assertion to ConnectOptions
+  .then(() => {
+    console.log('Connected to MongoDB');
+  })
+  .catch((error) => {
+    console.error('MongoDB connection error:', error);
   });
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-
+export const postHandler = async (req: NextApiRequest, res: NextApiResponse) => {
+  if (req.method === 'POST') {
     try {
-      const response = await fetch('/api/server', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+      const { name, email, phone, message } = req.body;
+
+      // Create a new document using the FormDataModel
+      const newFormData = new FormDataModel({
+        name,
+        email,
+        phone,
+        message,
       });
 
-      if (response.ok) {
-        console.log('Form submitted successfully');
-        // Reset form data after successful submission
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          message: '',
-        });
-      } else {
-        console.error('Form submission failed');
-      }
+      // Save the form data to MongoDB
+      await newFormData.save();
+
+      res.status(200).json({ message: 'Form data saved successfully' });
     } catch (error) {
-      console.error('Error submitting the form:', error);
+      console.error('Error saving form data:', error);
+      res.status(500).json({ error: 'Error saving form data' });
     }
-  };
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = event.target;
-
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  return (
-    <div>
-      <Head>
-        <title>Contact Us | AI Consulting site</title>
-        <meta name="description" content="Contact AI Consulting for your AI needs." />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <div className="flex flex-col items-center justify-center h-[50vh] md:h-[75vh] bg-gradient-to-r from-primarylight to-primary">
-        <div className="text-center text-white">
-          <h1 className="font-sans font-bold text-4xl md:text-7xl">CONTACT</h1>
-          <h4 className="font-sans font-bold text-xl md:text-2xl mt-4 md:mt-5">
-            We're here for your A.I. and Big Data needs.
-          </h4>
-        </div>
-      </div>
-
-      <main className="max-w-lg mx-auto my-10 p-6 bg-white rounded-lg shadow-xl">
-        <h1 className="text-3xl font-roboto font-bold text-gray-900 mb-5">Contact US!</h1>
-        <p className="text-gray-700 mb-5">"Unlock the Power of Data: Reach Out for Insightful Solutions!"</p>
-
-        <form onSubmit={handleSubmit} className="mb-5 ">
-          <label htmlFor="name" className="block text-gray-700 font-bold mb-2">
-            Name
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            className="border border-gray-400 p-2 rounded-lg w-full mb-3"
-            value={formData.name}
-            onChange={handleChange}
-          />
-
-          <label htmlFor="email" className="block text-gray-700 font-bold mb-2">
-            Email
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            className="border border-gray-400 p-2 rounded-lg w-full mb-3"
-            value={formData.email}
-            onChange={handleChange}
-          />
-
-          <label htmlFor="phone" className="block text-gray-700 font-bold mb-2">
-            Phone
-          </label>
-          <input
-            type="phone"
-            id="phone"
-            name="phone"
-            required
-            className="border border-gray-400 p-2 rounded-lg w-full mb-3"
-            value={formData.phone}
-            onChange={handleChange}
-          />
-
-          <label htmlFor="message" className="block text-gray-700 font-bold mb-2">
-            Message
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            className="border border-gray-400 p-2 rounded-lg w-full mb-3"
-            value={formData.message}
-            onChange={handleChange}
-          ></textarea>
-
-          
-          <button
-            type="submit"
-            className="bg-primarylight hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            style={{ backgroundColor: '#0a315e', color: '#FFFFFF' }}
-            onClick={() => Router.push('/thankyou')}
-          >
-            Submit
-          </button>
-        </form>
-      </main>
-    </div>
-  );
+  } else {
+    res.status(405).json({ error: 'Method Not Allowed' });
+  }
 };
 
-export default Contact;
+export const getHandler = async (req: NextApiRequest, res: NextApiResponse) => {
+  if (req.method === 'GET') {
+    try {
+      // Handle GET method logic if required
+      res.status(200).json({ message: 'GET request handled' });
+    } catch (error) {
+      console.error('Error handling GET request:', error);
+      res.status(500).json({ error: 'Error handling GET request' });
+    }
+  } else {
+    res.status(405).json({ error: 'Method Not Allowed' });
+  }
+};
