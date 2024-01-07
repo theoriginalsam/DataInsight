@@ -1,142 +1,155 @@
-import Head from "next/head";
-import Link from "next/link";
-import Waves from "../components/Waves";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faTrophy,
-  faChartLine,
-  faUser,
-  faProjectDiagram,
-} from "@fortawesome/free-solid-svg-icons";
+import Image from "next/image";
+import SectionTitle from "../components/SectiionTitle";
+import Breadcrumb from "../components/breadCrumbs";
 
-const about = () => {
-    return ( 
+const checkIcon = (
+  <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
+    <path d="M5.8535 12.6631C5.65824 12.8584 5.34166 12.8584 5.1464 12.6631L0.678505 8.1952C0.483242 7.99994 0.483242 7.68336 0.678505 7.4881L2.32921 5.83739C2.52467 5.64193 2.84166 5.64216 3.03684 5.83791L5.14622 7.95354C5.34147 8.14936 5.65859 8.14952 5.85403 7.95388L13.3797 0.420561C13.575 0.22513 13.8917 0.225051 14.087 0.420383L15.7381 2.07143C15.9333 2.26669 15.9333 2.58327 15.7381 2.77854L5.8535 12.6631Z" />
+  </svg>
+);
 
-      
-      <div>
-           <Head>
-        <title>About Us | AI Consulting</title>
-      </Head>
-        
-        <div className="flex flex-col items-center justify-center h-[50vh]  md:h-[75vh]  bg-gradient-to-r from-primarylight to-primary">
-  <div className="text-center text-white">
-    <h1 className="font-sans font-bold text-4xl md:text-7xl">ABOUT</h1>
-    <h4 className="font-sans font-bold text-xl md:text-2xl mt-4 md:mt-5">
-      We're here for your A.I. and Big Data needs.
-      
-    </h4>
-  </div>
-</div>
+const AboutSectionOne = () => {
 
+
+  interface ListProps {
+    text: string; // Assuming 'text' is a string
+  }
+  
+  const List: React.FC<ListProps> = ({ text }) => (
+    <p className="mb-5 flex items-center text-lg font-medium text-body-color">
+      <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-white  text-white">
+        {checkIcon}
+      </span>
+      {text}
+    </p>
+  );
+  return (
+    <>
+    <div className="bg-primary text-white  ">
+    <Breadcrumb
     
-    
-    <div >
-   
-     
-    <div className="flex flex-col md:flex-row items-center justify-center h-screen mt-[1%] md:-mt-[5%]">
-  <div className="max-w-4xl md:w-1/2 text-primarylight rounded-md shadow-lg p-8 md:mr-4">
-    <h2 className="text-2xl font-bold mb-4">About Us</h2>
-    <p className="text-xl mb-8">
-      At AI Consulting, we're passionate about helping businesses leverage the
-      power of artificial intelligence to solve complex problems and drive
-      growth.
-    </p>
-    <p className="text-xl mb-8">
-      Our team of expert data scientists, engineers, and machine learning
-      specialists work together to build custom AI solutions that are tailored
-      to your specific business needs. We believe that AI has the potential to
-      revolutionize the way businesses operate, and we're dedicated to helping
-      our clients stay ahead of the curve.
-    </p>
-    <p className="text-xl">
-      Whether you're looking to implement AI for the first time or need help
-      optimizing your existing AI systems, we're here to help. Contact us today
-      to learn more about how we can help your business succeed with AI.
-    </p>
-  </div>
-  <div className="w-full md:w-1/2 flex justify-center">
-    <img src="https://assets.website-files.com/61554cf069663530fc823d21/637e608d345b29800e3870cb_image-2.webp" alt="Your Image" className="max-w-md rounded-md shadow-lg" />
-  </div>
-</div>
+    pageName="About Page"
+    description="At AI Consulting, we're passionate about helping businesses leverage the power of artificial intelligence to solve complex problems and drive growth.
 
-      <section className="bg-gray-100 mt-[25%] md:mt-[2%] ">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-primary mb-4">
-              Our Achievements
-            </h2>
-            <p className="text-lg text-gray-500">
-              We're proud to have accomplished the following in our AI
-              consulting work.
-            </p>
-          </div>
-          <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white">
-                <FontAwesomeIcon icon={faTrophy} className="h-6 w-6" />
-              </div>
-              <div className="mt-5">
-                <p className="text-lg font-bold text-gray-700">
-                  50+ successful projects delivered
-                </p>
-                <p className="mt-2 text-base text-gray-500">
-                  We have a proven track record of delivering successful AI
-                  projects for our clients.
-                </p>
-              </div>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white">
-                <FontAwesomeIcon icon={faChartLine} className="h-6 w-6" />
-              </div>
-              <div className="mt-5">
-                <p className="text-lg font-bold text-gray-700">
-                  20% increase in revenue for clients
-                </p>
-                <p className="mt-2 text-base text-gray-500">
-                  Our AI solutions have helped our clients achieve significant
-                  revenue growth.
-                </p>
+    "
+    />
+    <div className="">
+    <section id="about" className="pt-16 md:pt-20 lg:pt-28 bg-gradient-to-r from-primarylight to-primary text-white">
+      <div className="container items-center justify-center  md:mx-10 mx-2">
+        <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
+          <div className="-mx-4 flex flex-wrap items-center">
+            <div className="w-full px-4 lg:w-1/2">
+              <SectionTitle
+                title="DataInsight Services Overview."
+                paragraph="DataInsight offers a comprehensive suite of services aimed at addressing diverse industry needs. Our solutions cater to IT training and staffing, healthcare staffing, big data, and machine learning solutions, telehealth, genomic clinical research, and web development."
+                mb="44px"
+              />
+
+              <div
+                className="wow fadeInUp mb-12 max-w-[570px] lg:mb-0"
+                data-wow-delay=".15s"
+              >
+                <div className="mx-[-12px] flex flex-wrap">
+                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
+                    <List text="IT Training and Staffing" />
+                    <List text="Healthcare Staffing" />
+                    <List text="Big Data and ML Solutions" />
+                  </div>
+
+                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
+                    <List text="Telehealth Services" />
+                    <List text="Genomic Clinical Research" />
+                    <List text="Web Development" />
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white">
-                <FontAwesomeIcon icon={faUser} className="h-6 w-6" />
-              </div>
-              <div className="mt-5">
-                <p className="text-lg font-bold text-gray-700">
-                  50+ satisfied clients
-                </p>
-                <p className="mt-2 text-base text-gray-500">
-                  We pride ourselves on delivering top-quality AI consulting
-                  services that leave our clients happy and satisfied.
-                </p>
-              </div>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white">
-                <FontAwesomeIcon icon={faProjectDiagram} className="h-6 w-6" />
-              </div>
-              <div className="mt-5">
-                <p className="text-lg font-bold text-gray-700">
-                  Expertise in a wide range of AI applications
-                </p>
-                <p className="mt-2 text-base text-gray-500">
-                  From computer vision to natural language processing, we have
-                  extensive experience in a variety of AI applications.
-                </p>
+
+            <div className="w-full px-4 lg:w-1/2">
+              <div
+                className="wow fadeInUp relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0"
+                data-wow-delay=".2s"
+              >
+                <Image
+                  src="/../public/about1.png"
+                  alt="about-image"
+                  fill
+                  className="drop-shadow-three mx-auto max-w-full dark:hidden dark:drop-shadow-none lg:mr-0"
+                />
+                <Image
+                  src="/../public/about2.jpeg"
+                  alt="about-image"
+                  fill
+                  className="drop-shadow-three mx-auto hidden max-w-full dark:block dark:drop-shadow-none lg:mr-0"
+                />
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+    <section className="py-16 md:py-20 lg:py-28 bg-white text-primary ">
+    <div className="container items-center justify-center  md:mx-10 mx-2">
+      <div className="-mx-4 flex flex-wrap items-center">
+        <div className="w-full px-4 lg:w-1/2">
+          <div
+            className="wow fadeInUp relative mx-auto mb-12 aspect-[25/24] max-w-[500px] text-center lg:m-0"
+            data-wow-delay=".15s"
+          >
+            <Image
+              src="/../public/about2.jpeg"
+              alt="about image"
+              
+              height={500}
+              width={500}
+              className="drop-shadow-three dark:hidden dark:drop-shadow-none"
+            />
+            <Image
+              src="/../public/about2.jpeg"
+              alt="about image"
+              fill
+              className="drop-shadow-three hidden dark:block dark:drop-shadow-none"
+            />
+          </div>
+        </div>
+        <div className="w-full px-4 lg:w-1/2">
+          <div className="wow fadeInUp max-w-[470px]" data-wow-delay=".2s">
+            <div className="mb-9">
+              <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+              IT Training and Staffing
+              </h3>
+              <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+              Tailored training and staffing solutions for the IT industry.
+
+
+              </p>
+            </div>
+            <div className="mb-9">
+              <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+              Big Data and ML Solutions
+              </h3>
+              <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+              Cutting-edge solutions harnessing big data and machine learning capabilities.
+              </p>
+            </div>
+            <div className="mb-1">
+              <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+              Web Development
+              </h3>
+              <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+              Customized web development services for various business needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    
+  </section>
   
-    </div>
+  </div>
+  </div>
+  </>
+  );
+};
 
-
-     );
-}
- 
-export default about;
+export default AboutSectionOne;

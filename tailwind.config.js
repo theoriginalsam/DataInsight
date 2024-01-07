@@ -15,8 +15,8 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        roboto: ["Roboto", "sans-serif"],
-        sans: ['"Smooch Sans"', "sans-serif"],
+        sans: ["Inter", "sans-serif"],
+        
         backgroundImage: {
           pattern:
             "url('https://media.istockphoto.com/vectors/abstract-gray-vector-background-vector-id1296403715?b=1&k=20&m=1296403715&s=170667a&w=0&h=ZC-3bnkPVpiryBP5xifNldNYzO9y4PWQgjL7NysoDJ0=')",

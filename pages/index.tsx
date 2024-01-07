@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link";
 import Waves from "../components/Waves";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,50 +8,48 @@ import {
   faUser,
   faProjectDiagram,
 } from "@fortawesome/free-solid-svg-icons";
+import  Webdevelopment from "../pages/Services/webDevelopment"
+
 
 export default function Home() {
- 
   return (
-    
     <>
       <section
-  id="hero-section"
-  className="w-screen min-h-screen  flex justify-center items-center bg-gradient-to-r from-primarylight to-primary text-white pt-[8%] "
->
-  <div className="text-center">
-    <h1 className="font-sans font-bold text-4xl md:text-7xl">
-      DataInsight
-    </h1>
-    <h4 className="font-sans font-bold text-lg md:text-xl pt-3 md:pt-5">
-      We're here for your A.I. and Big Data needs.
-    </h4>
-  </div>
-  <style jsx>{`
-    /* Add your keyframes outside the component */
-    @keyframes fade-in {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
+        id="hero-section"
+        className="w-screen min-h-screen  flex justify-center items-center bg-primary text-white "
+      >
+        <div className="text-center">
+          <h1 className="font-sans font-bold text-4xl md:text-7xl">
+            DataInsight
+          </h1>
+          <h4 className="font-sans font-bold text-lg md:text-xl pt-3 md:pt-5">
+            We're here for your A.I. and Big Data needs.
+          </h4>
+        </div>
+        <style jsx>{`
+          /* Add your keyframes outside the component */
+          @keyframes fade-in {
+            from {
+              opacity: 0;
+            }
+            to {
+              opacity: 1;
+            }
+          }
 
-    /* Apply the animation to the headings */
-    h1,
-    h4 {
-      animation: fade-in 1s ease-in forwards;
-      opacity: 0;
-    }
-  `}</style>
-
+          /* Apply the animation to the headings */
+          h1,
+          h4 {
+            animation: fade-in 1s ease-in forwards;
+            opacity: 0;
+          }
+        `}</style>
 
         <Waves />
-     
       </section>
 
       <section>
-  {/*
+        {/*
     <div className="flex flex-col md:flex-row items-center justify-center h-screen md:-mt-[5%]">
       <div className="max-w-4xl md:w-1/2 text-primarylight rounded-md shadow-lg p-8 md:mr-10">
         <div className="flex flex-col md:flex-row items-center justify-center">
@@ -76,7 +75,7 @@ export default function Home() {
       </div>
     </div>
   */}
-</section>
+      </section>
 
       <section className="bg-gray-100 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -149,6 +148,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <Webdevelopment/>
     </>
   );
 }

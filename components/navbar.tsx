@@ -52,7 +52,7 @@ const navbar = ({ children }: any) => {
 
   return (
     <>
-      <nav className=" mt-[1%] top-[0] z-1000 font-sans font-bold  absolute flex w-screen  justify-around bg-gradient-to-r from-primarylight to-primary ">
+      <nav className=" pt-[0%] md:pt-[1%] top-[0] z-1000 font-sans font-bold  absolute flex w-screen  justify-around bg-gradient-to-r from-primarylight to-primary ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between ">
             <div className="flex items-center text-4xl">
@@ -66,14 +66,14 @@ const navbar = ({ children }: any) => {
                 <div className="ml-10 flex items-baseline space-x-4">
                   <Link href="/">
                     <div
-                      className="text-white hover:bg-primarylight hover:text-white px-3 py-2 rounded-md text-3xl font-medium cursor-pointer "
+                      className="text-white hover:bg-primarylight hover:text-white px-3 py-2 rounded-md text-xl font-medium cursor-pointer "
                       onClick={closeMenu}
                     >
                       Home
                     </div>
                   </Link>
                   <Link href="/about">
-                    <div className="text-white hover:bg-primarylight hover:text-white px-3 py-2 rounded-md text-3xl font-medium cursor-pointer">
+                    <div className="text-white hover:bg-primarylight hover:text-white px-3 py-2 rounded-md text-xl font-medium cursor-pointer">
                       About
                     </div>
                   </Link>
@@ -81,7 +81,7 @@ const navbar = ({ children }: any) => {
                   <div className="relative">
                     <div
                       onClick={handleMouseEnter}
-                      className="text-white z-[100] hover:bg-primarylight hover:text-white px-3 py-2 rounded-md text-3xl font-medium cursor-pointer"
+                      className="text-white z-[100] hover:bg-primarylight hover:text-white px-3 py-2 rounded-md text-xl font-medium cursor-pointer"
                     >
                       Service
                     </div>
@@ -94,45 +94,51 @@ const navbar = ({ children }: any) => {
                     >
                       <Link href="/Services/bigdata">
                         <div className="block px-4 py-2 text-xl text-primary hover:bg-primarylight hover:text-white hover:underline cursor-pointer">
-                          Bigdata
+                          IT Training and Staffing
                         </div>
                       </Link>
                       <Link href="/aiml">
                         <div className="block px-4 py-2 text-xl text-primary hover:bg-primarylight hover:text-white hover:underline cursor-pointer">
-                          AI-ML
+                          Healthcare Staffing
                         </div>
                       </Link>
                       <Link href="/page3">
                         <div className="block px-4 py-2 text-xl text-primary hover:bg-primarylight hover:text-white hover:underline cursor-pointer">
-                          Computer Vision
+                          Bigdata and ML Solutions
+                        </div>
+                      </Link>
+               
+                      <Link href="/page3">
+                        <div className="block px-4 py-2 text-xl text-primary hover:bg-primarylight hover:text-white hover:underline cursor-pointer">
+                          Tele Health
                         </div>
                       </Link>
                       <Link href="/page3">
                         <div className="block px-4 py-2 text-xl text-primary hover:bg-primarylight hover:text-white hover:underline cursor-pointer">
-                          Natural Language Processing
+                         Genomic Clinical Research
                         </div>
                       </Link>
-                      <Link href="/page3">
+                      <Link href="/Services/webDevelopment">
                         <div className="block px-4 py-2 text-xl text-primary hover:bg-primarylight hover:text-white hover:underline cursor-pointer">
-                          Deep Learning
+                         Web Development
                         </div>
                       </Link>
                     </div>
                   </div>
                   <Link href="/contact">
-                    <div className="text-white hover:bg-primarylight hover:text-white px-3 py-2 rounded-md text-3xl font-medium cursor-pointer">
+                    <div className="text-white hover:bg-primarylight hover:text-white px-3 py-2 rounded-md text-xl font-medium cursor-pointer">
                       Contact
                     </div>
                   </Link>
                   <Link href="/work">
-                    <div className="text-white hover:bg-primarylight hover:text-white px-3 py-2 rounded-md text-3xl font-medium cursor-pointer">
+                    <div className="text-white hover:bg-primarylight hover:text-white px-3 py-2 rounded-md text-xl font-medium cursor-pointer">
                       Request Demo
                     </div>
                   </Link>
                   <a href="https://courses.datainsight.cloud">
-                    <div className="text-primarylight bg-white hover:bg-primarylight hover:text-white px-3 py-2 rounded-md flex items-center cursor-pointer">
+                    <div className="text-primarylight bg-white hover:bg-primarylight hover:text-white px-3 rounded-md flex items-center cursor-pointer">
                       Courses
-                      <i className="fas fa-book ml-2"></i>
+                      <i className="fas fa-book ml-3"></i>
                     </div>
                   </a>
                 </div>
@@ -140,7 +146,7 @@ const navbar = ({ children }: any) => {
             </div>
             <div className="md:hidden z-[99] fixed top-0 left-0 m-4">
               <HiMenu
-                className="text-white  text-3xl cursor-pointer"
+                className="text-white  text-xl cursor-pointer"
                 onClick={toggleMenu}
               />
             </div>
@@ -148,7 +154,7 @@ const navbar = ({ children }: any) => {
               <div className="fixed top-0 left-0 w-full h-full bg-white z-[100]">
                 <div className="flex items-center justify-between px-4 py-2">
                   <HiArrowLeft
-                    className="text-primarylight text-3xl cursor-pointer"
+                    className="text-primarylight text-xl cursor-pointer"
                     onClick={toggleMenu}
                   />
                   <div className="text-primarylight text-xl font-medium">
