@@ -58,7 +58,7 @@ const Header = () => {
                 } `}
               >
                 <Image
-                  src="/../public/logo.png"
+                  src="/logo.png"
                   alt="logo"
                   width={140}
                   height={30}
@@ -72,20 +72,20 @@ const Header = () => {
                   onClick={navbarToggleHandler}
                   id="navbarToggler"
                   aria-label="Mobile Menu"
-                  className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
+                  className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-[6px] ring-white focus:ring-2 lg:hidden text-primary "
                 >
                   <span
-                    className={`relative my-1.5  block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white  ${
+                    className={`relative my-1.5  block h-0.5 w-[30px] bg-white transition-all duration-300 dark:bg-white  ${
                       navbarOpen ? " top-[7px] rotate-45" : " "
                     }`}
                   />
                   <span
-                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white  ${
+                    className={`relative my-1.5 block h-0.5 w-[30px] bg-white transition-all duration-300 dark:bg-white  ${
                       navbarOpen ? "opacity-0 " : " "
                     }`}
                   />
                   <span
-                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white  ${
+                    className={`relative my-1.5 block h-0.5 w-[30px] bg-white transition-all duration-300 dark:bg-white  ${
                       navbarOpen ? " top-[-8px] -rotate-45" : " "
                     }`}
                   />
@@ -119,7 +119,7 @@ const Header = () => {
                               className="flex cursor-pointer items-center  justify-between py-2 text-base text-dark group-hover:text-secondary dark:text-white/70 dark:group-hover:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6"
                             >
                               {menuItem.title}
-                              <span className="pl-3 ">
+                              <span className="pl-3">
                                 <svg width="25" height="24" viewBox="0 0 25 24">
                                   <path
                                     fillRule="evenodd"
@@ -131,7 +131,7 @@ const Header = () => {
                               </span>
                             </p>
                             <div
-                              className={`submenu relative left-0 top-full rounded-sm font-sans  bg-white px-5 py-[10px] text-primary transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
+                              className={`submenu relative left-0 top-full rounded-sm font-sans  bg-secondary px-5  text-primary transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
                                 openIndex === index ? "block" : "hidden"
                               }`}
                             >

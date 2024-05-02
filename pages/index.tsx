@@ -8,7 +8,11 @@ import {
   faUser,
   faProjectDiagram,
 } from "@fortawesome/free-solid-svg-icons";
+
+
+
 import  Webdevelopment from "../pages/Services/webDevelopment"
+import Reviews from "../components/reviews";
 
 
 export default function Home() {
@@ -149,6 +153,7 @@ export default function Home() {
         </div>
       </section>
       <Webdevelopment/>
+      <Reviews/>
     </>
   );
 }

@@ -71,17 +71,12 @@ const AboutSectionOne = () => {
                 data-wow-delay=".2s"
               >
                 <Image
-                  src="/../public/about1.png"
+                  src="/about1.png"
                   alt="about-image"
                   fill
                   className="drop-shadow-three mx-auto max-w-full dark:hidden dark:drop-shadow-none lg:mr-0"
                 />
-                <Image
-                  src="/../public/about2.jpeg"
-                  alt="about-image"
-                  fill
-                  className="drop-shadow-three mx-auto hidden max-w-full dark:block dark:drop-shadow-none lg:mr-0"
-                />
+ 
               </div>
             </div>
           </div>
@@ -97,19 +92,14 @@ const AboutSectionOne = () => {
             data-wow-delay=".15s"
           >
             <Image
-              src="/../public/about2.jpeg"
+              src="/about2.jpeg"
               alt="about image"
               
               height={500}
               width={500}
               className="drop-shadow-three dark:hidden dark:drop-shadow-none"
             />
-            <Image
-              src="/../public/about2.jpeg"
-              alt="about image"
-              fill
-              className="drop-shadow-three hidden dark:block dark:drop-shadow-none"
-            />
+    
           </div>
         </div>
         <div className="w-full px-4 lg:w-1/2">
