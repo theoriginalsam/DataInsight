@@ -53,6 +53,12 @@ const menuItems: Menu[] = [
         title: "Web Development",
         path: "/Services/webDevelopment",
         newTab: false
+      },
+      {
+        id: 36,
+        title: "Kids Coding",
+        path: "/Services/kidsCoding",
+        newTab: false
       }
     ]
   },
