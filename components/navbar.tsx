@@ -11,9 +11,9 @@ const navbar = ({ children }: any) => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const closeMenu = () => {
+  function closeMenu() {
     setIsMenuOpen(false);
-  };
+  }
 
   const [showDropdown, setShowDropdown] = useState(false);
   useEffect(() => {
@@ -132,12 +132,18 @@ const navbar = ({ children }: any) => {
                   </Link>
                   <Link href="/work">
                     <div className="text-white hover:bg-primarylight hover:text-white px-3 py-2 rounded-md text-xl font-medium cursor-pointer">
-                      Request Demo
+                      Request Demoo
                     </div>
                   </Link>
                   <a href="https://courses.datainsight.cloud">
                     <div className="text-primarylight bg-white hover:bg-primarylight hover:text-white px-3 rounded-md flex items-center cursor-pointer">
                       Courses
+                      <i className="fas fa-book ml-3"></i>
+                    </div>
+                  </a>
+                  <a href="https://kids.datainsight.cloud">
+                    <div className="text-primarylight bg-white hover:bg-primarylight hover:text-white px-3 rounded-md flex items-center cursor-pointer">
+                      Kids
                       <i className="fas fa-book ml-3"></i>
                     </div>
                   </a>
@@ -211,6 +217,13 @@ const navbar = ({ children }: any) => {
                   >
                     Courses
                   </a>
+                  <a
+                    href="https://kids.datainsight.cloud"
+                    className="text-primarylight hover:bg-white hover:text-primarylight px-3 py-2 rounded-md text-xl font-medium cursor-pointer"
+                    onClick={closeMenu}
+                    target="_blank"
+                    rel="noopener noreferrer" 
+                    ></a>
                 </div>
               </div>
             )}

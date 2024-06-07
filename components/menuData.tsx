@@ -73,6 +73,12 @@ const menuItems: Menu[] = [
     title: "Courses",
     path: "https://courses.datainsight.cloud",
     newTab: true
+  },
+  {
+    id: 7,
+    title: "KLearning",
+    path: "https://datainsight.infinityfreeapp.com/?i=1",
+    newTab: true
   }
 ];
 
