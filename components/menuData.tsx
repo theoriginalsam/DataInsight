@@ -5,13 +5,13 @@ const menuItems: Menu[] = [
     id: 1,
     title: "Home",
     path: "/",
-    newTab: false
+    newTab: false,
   },
   {
     id: 2,
     title: "About",
     path: "/about",
-    newTab: false
+    newTab: false,
   },
   {
     id: 3,
@@ -22,70 +22,70 @@ const menuItems: Menu[] = [
         id: 31,
         title: "IT Training and Staffing",
         path: "/Services/bigdata",
-        newTab: false
+        newTab: false,
       },
       {
         id: 32,
         title: "Healthcare Staffing",
         path: "/aiml",
-        newTab: false
+        newTab: false,
       },
       {
         id: 33,
         title: "Bigdata and ML Solutions",
         path: "/page3",
-        newTab: false
+        newTab: false,
       },
       {
         id: 34,
         title: "Tele Health",
         path: "/page3",
-        newTab: false
+        newTab: false,
       },
       {
         id: 35,
         title: "Genomic Clinical Research",
         path: "/page3",
-        newTab: false
+        newTab: false,
       },
       {
         id: 36,
         title: "Web Development",
         path: "/Services/webDevelopment",
-        newTab: false
+        newTab: false,
       },
       {
         id: 36,
         title: "Kids Coding",
         path: "/Services/kidsCoding",
-        newTab: false
-      }
-    ]
+        newTab: false,
+      },
+    ],
   },
   {
     id: 4,
     title: "Contact",
     path: "/contact",
-    newTab: false
+    newTab: false,
   },
   {
     id: 5,
     title: "Request Demo",
     path: "/work",
-    newTab: false
+    newTab: false,
   },
   {
     id: 6,
     title: "Courses",
-    path: "https://courses.datainsight.cloud",
-    newTab: true
+    path: "/courses",
+    newTab: true,
   },
   {
     id: 7,
     title: "KLearning",
     path: "https://datainsight.infinityfreeapp.com/?i=1",
-    newTab: true
-  }
+    newTab: true,
+  },
 ];
 
 export default menuItems;

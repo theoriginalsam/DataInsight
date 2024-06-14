@@ -2,7 +2,7 @@ import SectionTitle from "../../components/SectiionTitle";
 import SingleFeature from "../../components/SingleFeature";
 import featuresData from "../../components/chaptersData";
 
-const webdevelopment = () => {
+const kidsCoding = () => {
   return (
     <>
       <section id="features" className="flex py-[200px] bg-primary text-white ">
@@ -41,4 +41,4 @@ const webdevelopment = () => {
   );
 };
 
-export default webdevelopment;
+export default kidsCoding;
