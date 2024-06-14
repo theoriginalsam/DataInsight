@@ -14,7 +14,7 @@ const KidsCoding = () => {
               center
             />
           </div>
-          {/* <EnrollToday /> */}
+          <EnrollToday />
           <br />
           <br />
           <br />

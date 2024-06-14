@@ -26,11 +26,11 @@ const CourseCard: React.FC<CourseCardProps> = ({
       <p className="text-gray-500 mb-4">Timeline: {timeline}</p>
       <div className="flex justify-between items-center">
         <Link href="/contact">
-          <button className="flex bg-indigo-500 text-white px-4 py-2 border rounded-md hover:bg-green-500 hover:border-indigo-500 hover:text-black">
+          <button className="flex bg-gray-400 text-white px-4 py-2 border rounded-md hover:scale-105 ">
             Enroll Today
           </button>
         </Link>
-        <button className="flex bg-indigo-500 text-white px-4 py-2 border rounded-md hover:bg-green-500 hover:border-indigo-500 hover:text-black">
+        <button className="flex bg-indigo-500 text-white px-4 py-2 border rounded-md hover:bg-green-500 hover:border-indigo-500 hover:scale-105 ">
           View Timeline
         </button>
       </div>

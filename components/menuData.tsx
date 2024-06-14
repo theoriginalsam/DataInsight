@@ -83,7 +83,7 @@ const menuItems: Menu[] = [
   {
     id: 7,
     title: "KLearning",
-    path: "https://datainsight.infinityfreeapp.com/?i=1",
+    path: "/Services/kidsCoding",
     newTab: true,
   },
 ];
