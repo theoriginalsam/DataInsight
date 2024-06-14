@@ -31,10 +31,32 @@ const KidsCoding = () => {
               image="/data-engineer.png"
               timeline="3 months"
             />
+
             <CourseCard
               title="Machine Learning"
               description="Dive into machine learning algorithms and build predictive models."
               image="/ML.png"
+              timeline="3 months"
+            />
+
+            <CourseCard
+              title="UI/UX"
+              description="Learn how to build and understand beautiful and modern User interface and user experience."
+              image="/QA.png"
+              timeline="3 months"
+            />
+
+            <CourseCard
+              title="Quality Assurance"
+              description="Learn how to ensure the quality of software products through systematic testing and validation."
+              image="/QA.png"
+              timeline="3 months"
+            />
+
+            <CourseCard
+              title="Big Data"
+              description="Understand the principles and techniques for managing and analyzing large datasets."
+              image="/BigData.png"
               timeline="3 months"
             />
           </div>
