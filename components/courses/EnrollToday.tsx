@@ -1,32 +1,63 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHeadset,
+  faBriefcase,
+  faProjectDiagram,
+} from "@fortawesome/free-solid-svg-icons";
 
 const EnrollToday = () => {
   return (
-    <div className="flex flex-col items-left bg-primary justify-center border-2 m-6 p-6 border-3 border-gray-300 rounded-lg bg-gray-50 shadow-lg transition-transform duration-300 hover:scale-105">
-      <h2 className="text-2xl font-bold mb-4 text-blue-">
-        Enroll Today to get premium access to:
-      </h2>
-      <ul className="space-y-4">
-        <li>
-          <h3 className="text-xl font-semibold">Job Network</h3>
-          <p className="text-gray-600">
-            We have a network of employers constantly looking to hire.
+    <section className="bg-gray-100 py-10">
+      <div className="max-w-7xl mx-auto px-6  sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-primary mb-4">
+            Unlock Premium Access
+          </h2>
+          <p className="text-lg text-gray-500">
+            Enroll today to get exclusive benefits for your learning journey.
           </p>
-        </li>
-        <li>
-          <h3 className="text-xl font-semibold">Projects</h3>
-          <p className="text-gray-600">
-            Build exciting projects with guidance from mentors.
-          </p>
-        </li>
-        <li>
-          <h3 className="text-xl font-semibold">Support</h3>
-          <p className="text-gray-600">
-            Get exceptional support from instructors and course mentors.
-          </p>
-        </li>
-      </ul>
-    </div>
+        </div>
+        <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white">
+              <FontAwesomeIcon icon={faBriefcase} className="h-6 w-6" />
+            </div>
+            <div className="mt-5">
+              <p className="text-lg font-bold text-gray-700">Job Network</p>
+              <p className="mt-2 text-base text-gray-500">
+                We have a network of employers constantly looking to hire
+                talented individuals like you.
+              </p>
+            </div>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white">
+              <FontAwesomeIcon icon={faProjectDiagram} className="h-6 w-6" />
+            </div>
+            <div className="mt-5">
+              <p className="text-lg font-bold text-gray-700">Projects</p>
+              <p className="mt-2 text-base text-gray-500">
+                Build exciting projects with guidance from experienced mentors
+                to enhance your skills and portfolio.
+              </p>
+            </div>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white">
+              <FontAwesomeIcon icon={faHeadset} className="h-6 w-6" />
+            </div>
+            <div className="mt-5">
+              <p className="text-lg font-bold text-gray-700">Support</p>
+              <p className="mt-2 text-base text-gray-500">
+                Get exceptional support from instructors and course mentors to
+                ensure you succeed in your learning journey.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
