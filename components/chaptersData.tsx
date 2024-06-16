@@ -1,7 +1,4 @@
-
 import { Feature } from "../types/features";
-
-
 
 const featuresData: Feature[] = [
   {
@@ -47,8 +44,7 @@ const featuresData: Feature[] = [
     ),
     title: "Web Development",
     paragraph:
-      "iscover the basics of web development and learn to create your own websites using HTML, CSS, and JavaScript.",
-
+      "Discover the basics of web development and learn to create your own websites using HTML, CSS, and JavaScript.",
   },
   {
     id: 4,
@@ -64,8 +60,6 @@ const featuresData: Feature[] = [
     title: "AI and Machine Learning",
     paragraph:
       "Explore the exciting field of artificial intelligence and machine learning with age-appropriate projects and experiments.",
-
   },
- 
 ];
 export default featuresData;

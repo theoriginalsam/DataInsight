@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import Waves from "../components/Waves";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,11 +9,8 @@ import {
   faProjectDiagram,
 } from "@fortawesome/free-solid-svg-icons";
 
-
-
-import  Webdevelopment from "../pages/Services/webDevelopment"
+import Webdevelopment from "../pages/Services/webDevelopment";
 import Reviews from "../components/reviews";
-
 
 export default function Home() {
   return (
@@ -152,8 +149,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Webdevelopment/>
-      <Reviews/>
+      <Webdevelopment />
+      <Reviews />
     </>
   );
 }

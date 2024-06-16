@@ -1,40 +1,34 @@
 import React from "react";
-import Link from "next/link";
 
 interface CourseCardProps {
   title: string;
   description: string;
   image: string;
-  timeline: string;
 }
 
 const CourseCard: React.FC<CourseCardProps> = ({
   title,
   description,
   image,
-  timeline,
 }) => {
   return (
-    <div className="border-2 border-black px-6 py-4 rounded-2xl">
+    <div className="max-w-sm rounded overflow-hidden shadow-lg py-5 px-5 bg-white hover:shadow-2xl transition-shadow duration-300">
       <img
+        className="w-w-full h-48 object-contain rounded-md mb-4 mx-auto"
         src={image}
         alt={title}
-        className="w-full h-48 object-contain rounded-md mb-4"
       />
-      <h3 className="text-xl font-semibold text-blue-600 mb-2">{title}</h3>
-      <p className="text-gray-600 mb-2">{description}</p>
-      {/* <p className="text-gray-500 mb-4">Timeline: {timeline}</p> */}
-      <div className="flex justify-between items-center">
-        <Link href="/contact">
-          <button className="flex bg-black text-black px-4 py-2 border rounded-md hover:scale-105 ">
-            Enroll Today
-          </button>
-        </Link>
-        <Link href="/ViewTimeline">
-          <button className="flex bg-indigo-500 text-black px-4 py-2 border rounded-md hover:bg-green-500 hover:border-indigo-500 hover:scale-105 ">
-            View Timeline
-          </button>
-        </Link>
+      <div className="px-6 py-4">
+        <div className="font-bold text-xl mb-2 text-gray-800">{title}</div>
+        <p className="text-gray-700 text-base">{description}</p>
+      </div>
+      <div className="px-6 pt-4 pb-2 mx-auto">
+        <button className="bg-primary hover:bg-secondary text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+          Enroll Today
+        </button>
+        <button className="bg-primary hover:bg-secondary text-white font-bold py-2 px-4 ml-4 rounded focus:outline-none focus:shadow-outline">
+          View Timeline
+        </button>
       </div>
     </div>
   );

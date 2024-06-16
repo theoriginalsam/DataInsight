@@ -1,8 +1,9 @@
 import SectionTitle from "../components/SectiionTitle";
 import CourseCard from "../components/courses/courseCard";
 import EnrollToday from "../components/courses/EnrollToday";
+import Reviews from "../components/reviews";
 
-const KidsCoding = () => {
+const Courses = () => {
   return (
     <>
       <section id="features" className="flex py-[200px] bg-primary text-white">
@@ -14,56 +15,57 @@ const KidsCoding = () => {
               center
             />
           </div>
-          <EnrollToday />
-          <br />
-          <br />
-          <br />
-          <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-3 lg:grid-cols-3">
+        </div>
+      </section>
+      <section>
+        <EnrollToday />
+      </section>
+
+      <section className="bg-primary py-8 py pb-20">
+        <div className="container mx-auto  px-6">
+          <h2 className="text-center mb-4 text-3xl font-bold !leading-tight text-black dark:text-white sm:text-4xl md:text-[45px] py-6">
+            Our Courses
+          </h2>
+          <div className="grid grid-cols-1 gap-x-8 gap-y-20 md:grid-cols-3 lg:grid-cols-3">
             <CourseCard
               title="Data Analytics"
               description="Learn to analyze and interpret complex data to drive informed decisions."
               image="/DA.png"
-              timeline="3 months"
             />
             <CourseCard
               title="Data Engineering"
               description="Master the skills to design, build, and manage robust data pipelines."
               image="/data-engineer.png"
-              timeline="3 months"
             />
-
             <CourseCard
               title="Machine Learning"
               description="Dive into machine learning algorithms and build predictive models."
               image="/ML.png"
-              timeline="3 months"
             />
-
-            <CourseCard
-              title="UI/UX"
-              description="Learn how to build and understand beautiful and modern User interface and user experience."
-              image="/QA.png"
-              timeline="3 months"
-            />
-
             <CourseCard
               title="Quality Assurance"
-              description="Learn how to ensure the quality of software products through systematic testing and validation."
+              description="Explore techniques for ensuring software quality and reliability."
               image="/QA.png"
-              timeline="3 months"
             />
-
+            <CourseCard
+              title="UI/UX Design"
+              description="Learn the principles of user interface and user experience design."
+              image="/UI-UX.png"
+            />
             <CourseCard
               title="Big Data"
-              description="Understand the principles and techniques for managing and analyzing large datasets."
+              description="Understand the strategies for processing vast  amound of data."
               image="/BigData.png"
-              timeline="3 months"
             />
           </div>
         </div>
+      </section>
+
+      <section>
+        <Reviews />
       </section>
     </>
   );
 };
 
-export default KidsCoding;
+export default Courses;
