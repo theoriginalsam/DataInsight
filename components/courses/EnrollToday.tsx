@@ -5,6 +5,7 @@ import {
   faBriefcase,
   faProjectDiagram,
 } from "@fortawesome/free-solid-svg-icons";
+import InfoCard from "../card/InfoCard";
 
 const EnrollToday = () => {
   return (
@@ -19,42 +20,21 @@ const EnrollToday = () => {
           </p>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white">
-              <FontAwesomeIcon icon={faBriefcase} className="h-6 w-6" />
-            </div>
-            <div className="mt-5">
-              <p className="text-lg font-bold text-gray-700">Job Network</p>
-              <p className="mt-2 text-base text-gray-500">
-                We have a network of employers constantly looking to hire
-                talented individuals like you.
-              </p>
-            </div>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white">
-              <FontAwesomeIcon icon={faProjectDiagram} className="h-6 w-6" />
-            </div>
-            <div className="mt-5">
-              <p className="text-lg font-bold text-gray-700">Projects</p>
-              <p className="mt-2 text-base text-gray-500">
-                Build exciting projects with guidance from experienced mentors
-                to enhance your skills and portfolio.
-              </p>
-            </div>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white">
-              <FontAwesomeIcon icon={faHeadset} className="h-6 w-6" />
-            </div>
-            <div className="mt-5">
-              <p className="text-lg font-bold text-gray-700">Support</p>
-              <p className="mt-2 text-base text-gray-500">
-                Get exceptional support from instructors and course mentors to
-                ensure you succeed in your learning journey.
-              </p>
-            </div>
-          </div>
+          <InfoCard
+            title="Job Network"
+            description="We have a network of employers constantly looking to hire talented individuals like you."
+            icon={faBriefcase}
+          />
+          <InfoCard
+            title="Support"
+            description="Get exceptional support from instructors and course mentors to ensure you succeed in your learning journey."
+            icon={faHeadset}
+          />
+          <InfoCard
+            title="Projects"
+            description="Build exciting projects with guidance from experienced mentors to enhance your skills and portfolio."
+            icon={faProjectDiagram}
+          />
         </div>
       </div>
     </section>
