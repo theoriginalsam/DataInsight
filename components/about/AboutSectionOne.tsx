@@ -1,9 +1,9 @@
 import React from "react";
-import SectionTitle from "../components/SectiionTitle";
-import ServiceList from "../components/about/ServiceList";
-import SectionImage from "../components/about/SectionImage";
-import SectionText from "../components/about/SectionText";
-import BreadcrumbSection from "../components/about/BreadcrumbSection";
+import SectionTitle from "../SectiionTitle";
+import ServiceList from "./ServiceList";
+import SectionImage from "./SectionImage";
+import SectionText from "./SectionText";
+import BreadcrumbSection from "./BreadcrumbSection";
 
 const AboutSectionOne: React.FC = () => (
   <>

@@ -7,7 +7,7 @@ const CourseList = () => {
       <h2 className="text-center mb-4 text-3xl font-bold !leading-tight text-black dark:text-white sm:text-4xl md:text-[45px] pt-10 pb-8">
         Our Courses
       </h2>
-      <div className="grid grid-cols-1 sm:justify-items-center gap-x-8 gap-y-20 md:grid-cols-3 lg:grid-cols-3">
+      <div className="grid grid-cols-1 justify-items-center gap-x-8 gap-y-20 md:grid-cols-3 lg:grid-cols-3">
         <CourseCard
           title="Data Analytics"
           description="Learn to analyze and interpret complex data to drive informed decisions."

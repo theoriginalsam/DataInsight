@@ -7,7 +7,7 @@ import CourseList from "../components/courses/CourseList";
 const Courses = () => {
   return (
     <>
-      <section id="features" className="flex py-[200px] bg-primary text-white">
+      <section id="features" className="flex py-[180px] bg-primary text-white">
         <div className="w-full mx-10 px-10">
           <div className="text-center">
             <SectionTitle
