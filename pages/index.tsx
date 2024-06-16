@@ -11,6 +11,9 @@ import {
 
 import Webdevelopment from "../pages/Services/webDevelopment";
 import Reviews from "../components/reviews";
+import EnrollToday from "../components/courses/EnrollToday";
+// import Courses from "./courses";
+import CourseList from "../components/courses/CourseList";
 
 export default function Home() {
   return (
@@ -150,6 +153,11 @@ export default function Home() {
         </div>
       </section>
       <Webdevelopment />
+      <EnrollToday />
+      <section className="bg-primary py-8 py pb-20">
+        <CourseList />
+      </section>
+
       <Reviews />
     </>
   );

@@ -77,7 +77,7 @@ const menuItems: Menu[] = [
   {
     id: 6,
     title: "Courses",
-    path: "/courses",
+    path: "/Courses",
     newTab: true,
   },
   {
