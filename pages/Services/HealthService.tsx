@@ -41,6 +41,65 @@ const Health = () => {
         </div>
       </section>
 
+      <section className="bg-primary text-white">
+        <div className="container mx-auto px-4 py-10">
+          {/* Row with Image on the left and Text on the right for large screens, stacked for small screens */}
+          <div className="flex flex-col md:flex-row items-center shadow-lg py-5 my-2 px-5 bg-primary hover:shadow-2xl transition-shadow duration-300  justify-center">
+            <div className="md:w-2/6 p-10">
+              <img
+                src="/health/data_analysis.jpg"
+                alt="Data Analysis"
+                className="rounded-lg shadow-lg w-full h-auto"
+              />
+            </div>
+            <div className="md:w-4/6 p-4">
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                Leverage Big Data
+              </h3>
+              <p className="text-lg text-white-700 text-justify">
+                Unlock the potential of big data to enhance patient care and
+                streamline operations. Our expert engineers provide
+                comprehensive solutions for complex data analysis challenges.
+              </p>
+            </div>
+          </div>
+
+          {/* Row with Text on the left and Image on the right for large screens, stacked for small screens */}
+          <div className="flex flex-col md:flex-row items-center shadow-lg py-5 my-2 px-5 bg-primary hover:shadow-2xl transition-shadow duration-300  justify-center">
+            <div className="md:w-2/6 p-10 order-last md:order-none">
+              <img
+                src="/health/neuralNetwork.jpg"
+                alt="Deep Learning"
+                className="rounded-lg shadow-lg w-full h-auto"
+              />
+            </div>
+            <div className="md:w-4/6 p-4">
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                Deep Learning Solutions
+              </h3>
+              <p className="text-lg text-white text-justify">
+                Unlock the potential of big data to enhance patient care and
+                streamline operations. Our expert engineers provide
+                comprehensive solutions for complex data analysis challenges.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="py-10 items-center justify-center shadow-lg  my-2 px-5 bg-primary hover:shadow-2xl transition-shadow duration-300">
+          <h3 className="text-5xl font-bold text-gray-900 mb-4 text-center">
+            Solutions Pipeline
+          </h3>
+          <div className="flex justify-center p-10 order-last md:order-none">
+            <img
+              src="/health/bb.png"
+              alt="Deep Learning"
+              className="rounded-lg shadow-lg w-3/4 h-auto"
+            />
+          </div>
+        </div>
+      </section>
+
       <section className="bg-gray-100 py-10">
         <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
           <div className="text-center">
