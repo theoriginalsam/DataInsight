@@ -45,7 +45,7 @@ const menuItems: Menu[] = [
       {
         id: 35,
         title: "Genomic Clinical Research",
-        path: "/page3",
+        path: "/Services/HealthService",
         newTab: false,
       },
       {

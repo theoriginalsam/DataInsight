@@ -28,11 +28,9 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-primary mb-4">
-              Unlock Premium Access
+              DataInsight Services Overview
             </h2>
-            <p className="text-lg text-gray-500">
-              Enroll today to get exclusive benefits for your learning journey.
-            </p>
+            <p className="text-lg text-gray-500"></p>
           </div>
           <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
             <InfoCard
