@@ -28,9 +28,11 @@ const CourseCard: React.FC<CourseCardProps> = ({
             Enroll Today
           </button>
         </Link>
-        <button className="bg-primary hover:bg-secondary text-white font-bold py-2 px-4 ml-4 rounded focus:outline-none focus:shadow-outline">
-          View Timeline
-        </button>
+        <Link href="/Timeline">
+          <button className="bg-primary hover:bg-secondary text-white font-bold py-2 px-4 ml-4 rounded focus:outline-none focus:shadow-outline">
+            View Timeline
+          </button>
+        </Link>
       </div>
     </div>
   );
