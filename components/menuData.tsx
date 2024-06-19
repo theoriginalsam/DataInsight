@@ -26,8 +26,8 @@ const menuItems: Menu[] = [
       },
       {
         id: 32,
-        title: "Healthcare Staffing",
-        path: "/aiml",
+        title: "Healthcare AI",
+        path: "/Services/HealthService",
         newTab: false,
       },
       {
