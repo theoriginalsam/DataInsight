@@ -21,7 +21,7 @@ const menuItems: Menu[] = [
       {
         id: 31,
         title: "IT Training and Staffing",
-        path: "/Services/bigdata",
+        path: "/Services/ITTraining",
         newTab: false,
       },
       {
