@@ -47,7 +47,7 @@ const CourseInformation = () => {
               Price: $2500
             </p>
             <p className="text-lg text-gray-600 mb-4">
-              (Deposit: $250 + After Enrollment: $2250)
+              (Deposit: $500 + After Enrollment: $2000)
             </p>
             <button className="bg-primary text-white border border-blue-600 py-3 px-6 rounded-lg mb-4 hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">
               Enroll Now
