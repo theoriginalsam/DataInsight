@@ -107,7 +107,7 @@ const navbar = ({ children }: any) => {
                           Bigdata and ML Solutions
                         </div>
                       </Link>
-               
+
                       <Link href="/page3">
                         <div className="block px-4 py-2 text-xl text-primary hover:bg-primarylight hover:text-white hover:underline cursor-pointer">
                           Tele Health
@@ -115,12 +115,12 @@ const navbar = ({ children }: any) => {
                       </Link>
                       <Link href="/page3">
                         <div className="block px-4 py-2 text-xl text-primary hover:bg-primarylight hover:text-white hover:underline cursor-pointer">
-                         Genomic Clinical Research
+                          Genomic Clinical Research
                         </div>
                       </Link>
                       <Link href="/Services/webDevelopment">
                         <div className="block px-4 py-2 text-xl text-primary hover:bg-primarylight hover:text-white hover:underline cursor-pointer">
-                         Web Development
+                          Web Development
                         </div>
                       </Link>
                     </div>
@@ -217,13 +217,13 @@ const navbar = ({ children }: any) => {
                   >
                     Courses
                   </a>
-                  <a
+                  {/* <a
                     href="https://kids.datainsight.cloud"
                     className="text-primarylight hover:bg-white hover:text-primarylight px-3 py-2 rounded-md text-xl font-medium cursor-pointer"
                     onClick={closeMenu}
                     target="_blank"
                     rel="noopener noreferrer" 
-                    ></a>
+                    ></a> */}
                 </div>
               </div>
             )}

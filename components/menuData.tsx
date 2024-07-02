@@ -76,15 +76,28 @@ const menuItems: Menu[] = [
   },
   {
     id: 6,
-    title: "Courses",
-    path: "/Courses",
+    title: "HomeInsight",
+    path: "/property-manager/home-insight",
     newTab: true,
   },
   {
     id: 7,
-    title: "KLearning",
-    path: "/Services/kidsCoding",
-    newTab: true,
+    title: "EduTech",
+    newTab: false,
+    submenu: [
+      {
+        id: 37,
+        title: "Courses",
+        path: "/Courses",
+        newTab: false,
+      },
+      {
+        id: 38,
+        title: "Kids Coding",
+        path: "/Services/kidsCoding",
+        newTab: false,
+      },
+    ],
   },
 ];
 
