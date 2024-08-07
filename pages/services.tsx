@@ -17,59 +17,70 @@ const services = () => {
       </div>
       <div>
         <div className="relative  mt-[20%] md: mt-[5%]">
-        
-            <div className="grid grid-rows-3 grid-flow-col gap-8 justify-center max-w m-[2%] mt-[75%] md:mt-[25%] text-gray-900  dark:text-primarylight  text-center text-20px md:text-2xl ">
-              <div className="flex flex-col pb-3">
-                <Link href="/Services/bigdata" className="mb-1 text-gray-500 text:1xlmd:text-4xl font-semibold no-underline hover:underline">
-                  BIG DATA : Data Science
-                </Link>
-                <dd className="text-lg font-semibold ">
-                  Explore more on Big Data
-                </dd>
-              </div>
-              <div className="flex flex-col pb-3">
-                <Link href="/about" className="mb-1 text-gray-500 text:1xlmd:text-4xl font-semibold no-underline hover:underline">
-                  AI Analytics : Data Science
-                </Link>
-                <dd className="text-lg font-semibold ">
-                  Explore more on AI Analytics
-                </dd>
-              </div>
-              <div className="flex flex-col pb-3">
-                <Link href="/about" className="mb-1 text-gray-500 text:1xlmd:text-4xl font-semibold no-underline hover:underline">
-                  Machine Learning : Data Science
-                </Link>
-                <dd className="text-lg font-semibold ">
-                  Explore more on ML
-                </dd>
-              </div>
-              <div className="flex flex-col pb-3">
-                <Link href="/about" className="mb-1 text-gray-500 text:1xlmd:text-4xl font-semibold no-underline hover:underline">
-                  BIG DATA : Data Science
-                </Link>
-                <dd className="text-lg font-semibold ">
-                  Explore more on Big Data
-                </dd>
-              </div>
-              <div className="flex flex-col pb-3">
-                <Link href="/about" className="mb-1 text-gray-500 text:1xlmd:text-4xl font-semibold no-underline hover:underline">
-                  AI Analytics : Data Science
-                </Link>
-                <dd className="text-lg font-semibold ">
-                  Explore more on AI Analytics
-                </dd>
-              </div>
-              <div className="flex flex-col pb-3">
-                <Link href="/about" className="mb-1 text-gray-500 text:1xlmd:text-4xl font-semibold no-underline hover:underline">
-                  Machine Learning : Data Science
-                </Link>
-                <dd className="text-lg font-semibold ">
-                  Explore more on ML
-                </dd>
-              </div>
-              
+          <div className="grid grid-rows-3 grid-flow-col gap-8 justify-center max-w m-[2%] mt-[75%] md:mt-[25%] text-gray-900  dark:text-primarylight  text-center text-20px md:text-2xl ">
+            <div className="flex flex-col pb-3">
+              <Link
+                href="/Services/bigdata"
+                className="mb-1 text-gray-500 text:1xlmd:text-4xl font-semibold no-underline hover:underline"
+              >
+                BIG DATA : Data Science
+              </Link>
+              <dd className="text-lg font-semibold ">
+                Explore more on Big Data
+              </dd>
             </div>
-         
+            <div className="flex flex-col pb-3">
+              <Link
+                href="/about"
+                className="mb-1 text-gray-500 text:1xlmd:text-4xl font-semibold no-underline hover:underline"
+              >
+                AI Analytics : Data Science
+              </Link>
+              <dd className="text-lg font-semibold ">
+                Explore more on AI Analytics
+              </dd>
+            </div>
+            <div className="flex flex-col pb-3">
+              <Link
+                href="/about"
+                className="mb-1 text-gray-500 text:1xlmd:text-4xl font-semibold no-underline hover:underline"
+              >
+                Machine Learning : Data Science
+              </Link>
+              <dd className="text-lg font-semibold ">Explore more on ML</dd>
+            </div>
+            <div className="flex flex-col pb-3">
+              <Link
+                href="/about"
+                className="mb-1 text-gray-500 text:1xlmd:text-4xl font-semibold no-underline hover:underline"
+              >
+                BIG DATA : Data Science
+              </Link>
+              <dd className="text-lg font-semibold ">
+                Explore more on Big Data
+              </dd>
+            </div>
+            <div className="flex flex-col pb-3">
+              <Link
+                href="/about"
+                className="mb-1 text-gray-500 text:1xlmd:text-4xl font-semibold no-underline hover:underline"
+              >
+                AI Analytics : Data Science
+              </Link>
+              <dd className="text-lg font-semibold ">
+                Explore more on AI Analytics
+              </dd>
+            </div>
+            <div className="flex flex-col pb-3">
+              <Link
+                href="/about"
+                className="mb-1 text-gray-500 text:1xlmd:text-4xl font-semibold no-underline hover:underline"
+              >
+                Machine Learning : Data Science
+              </Link>
+              <dd className="text-lg font-semibold ">Explore more on ML</dd>
+            </div>
+          </div>
         </div>
       </div>
     </div>

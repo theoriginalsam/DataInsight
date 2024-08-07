@@ -21,13 +21,13 @@ const menuItems: Menu[] = [
       {
         id: 31,
         title: "IT Training and Staffing",
-        path: "/Services/ITTraining",
+        path: "/services/ITTraining",
         newTab: false,
       },
       {
         id: 32,
         title: "Healthcare AI",
-        path: "/Services/HealthService",
+        path: "/services/HealthService",
         newTab: false,
       },
       {
@@ -45,19 +45,19 @@ const menuItems: Menu[] = [
       {
         id: 35,
         title: "Genomic Clinical Research",
-        path: "/Services/HealthService",
+        path: "/services/HealthService",
         newTab: false,
       },
       {
         id: 36,
         title: "Web Development",
-        path: "/Services/webDevelopment",
+        path: "/services/webDevelopment",
         newTab: false,
       },
       {
         id: 36,
         title: "Kids Coding",
-        path: "/Services/kidsCoding",
+        path: "/services/kidsCoding",
         newTab: false,
       },
     ],
@@ -88,13 +88,13 @@ const menuItems: Menu[] = [
       {
         id: 37,
         title: "Courses",
-        path: "/Courses",
+        path: "/courses",
         newTab: false,
       },
       {
         id: 38,
         title: "Kids Coding",
-        path: "/Services/kidsCoding",
+        path: "/services/kidsCoding",
         newTab: false,
       },
     ],

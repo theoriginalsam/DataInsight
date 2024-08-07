@@ -9,7 +9,7 @@ import {
   faProjectDiagram,
 } from "@fortawesome/free-solid-svg-icons";
 
-import Webdevelopment from "../pages/Services/webDevelopment";
+import Webdevelopment from "./services/webDevelopment";
 import Reviews from "../components/reviews";
 import EnrollToday from "../components/courses/EnrollToday";
 // import Courses from "./courses";
